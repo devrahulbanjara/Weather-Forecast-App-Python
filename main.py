@@ -11,7 +11,8 @@ if weather_data.json()['cod'] == '404':
     print("No City Found")
 else:
     weather = weather_data.json()['weather'][0]['main']
-    temp = round(weather_data.json()['main']['temp'])
+    temp_fahrenheit = weather_data.json()['main']['temp']
+    temp_celsius = int((temp_fahrenheit - 32) * 5/9)
 
     print(f"The weather in {user_input} is: {weather}")
-    print(f"The temperature in {user_input} is: {(temp-32)*5/9}ºC")
+    print(f"The temperature in {user_input} is: {temp_celsius}ºC")
