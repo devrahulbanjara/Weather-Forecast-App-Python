@@ -1,5 +1,6 @@
 import requests
 
+#make sure to change the api key (sign up into openweathermap website)
 api_key = '145c5f5cc7b6719079c76a215871e298'
 
 user_input = input("Enter city: ")
